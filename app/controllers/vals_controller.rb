@@ -40,11 +40,12 @@ class ValsController < ApplicationController
   # POST /vals
   # POST /vals.json
   def create
-    @val = Val.new(params[:val])
+    ps = params[:val] || { p1: params[:p1], p2: params[:p2], p3: params[:p3], p4: params[:p4], p5: params[:p5] }
+    @val = Val.new(ps)
 
     respond_to do |format|
       if @val.save
-        format.html { redirect_to @val, notice: 'Val was successfully created.' }
+        format.html { redirect_to @val, notice: 'Successfully created.' }
         format.json { render json: @val, status: :created, location: @val }
       else
         format.html { render action: "new" }
