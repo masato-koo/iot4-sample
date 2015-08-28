@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150819114452) do
+ActiveRecord::Schema.define(:version => 20150828051115) do
 
   create_table "vals", :force => true do |t|
     t.string   "p1"
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(:version => 20150819114452) do
     t.string   "p5"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "p6"
+    t.string   "p7"
+    t.string   "p8"
+    t.string   "p9"
   end
 
 end

@@ -40,7 +40,8 @@ class ValsController < ApplicationController
   # POST /vals
   # POST /vals.json
   def create
-    ps = params[:val] || { p1: params[:p1], p2: params[:p2], p3: params[:p3], p4: params[:p4], p5: params[:p5] }
+    ps = params[:val] || { p1: params[:p1], p2: params[:p2], p3: params[:p3], p4: params[:p4], p5: params[:p5],
+                           p6: params[:p6], p7: params[:p7], p8: params[:p8], p9: params[:p9] }
     @val = Val.new(ps)
 
     respond_to do |format|
